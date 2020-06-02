@@ -128,5 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Nonsense words dictionary
+# Specific text files
 nonsense.txt
+pw_out.txt
