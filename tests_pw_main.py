@@ -16,17 +16,17 @@ class TestGetChars(unittest.TestCase):
 
     def test_letter_counts(self):
         """Are all 26 letters included where intended?"""
-        upper = pwm.get_chars(upper=True, lower=False, numerals=False,
+        upper = pwm.get_chars(upper=True, lower=False, numerals=False, # uppercase only
               specials=False, spaces=False, all_whitespace=False)
-        lower = pwm.get_chars(upper=False, lower=True, numerals=False,
+        lower = pwm.get_chars(upper=False, lower=True, numerals=False,  # lowercase only
               specials=False, spaces=False, all_whitespace=False)
         for i in [len(upper), len(lower)]:
             self.assertEqual(i, 26)
 
     def test_numerals_count(self):
         """Are there 10 elements in the list of numeral-strings?"""
-        numerals = pwm.get_chars(upper=False, lower=False, numerals=True,
-              specials=False, spaces=False, all_whitespace=False)
+        numerals = pwm.get_chars(upper=False, lower=False, numerals=True, # Numerals only
+              specials=False, spaces=False, all_whitespace=False) 
         self.assertEqual(len(numerals), 10)
 
 if __name__ == '__main__':

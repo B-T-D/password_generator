@@ -1,3 +1,6 @@
+"""Generates a non-pronounceable password using the random module from the
+Python standard library."""
+
 import random
 
 def output_txt(pw, filename="pw_out.txt"):
@@ -30,7 +33,6 @@ def get_chars(upper=True, lower=True, numerals=True,
         all_whitespace(bool): True to include all of space, newline, and tab.
             Defaults to False. 
         
-
     Returns:
         (list): a list of strings
     """
@@ -72,6 +74,8 @@ def generate_pw(length, characters):
 
 def get_char_options_input():
     """
+    Used by the command_line() function.
+    
     Returns:
         characters (list or str): iterable set of characters for use by pw
             generator.
