@@ -9,22 +9,6 @@ def copy_to_clipboard(password):
     """Copy to clipboard using pyperclip."""
     pyperclip.copy(password)
 
-def tk_copy_to_clipboard(password):
-    """Copies the password string to the system clipboard using tkinter.
-
-    Args:
-        password (str): the password string
-
-    Returns:
-        None
-    """
-    tkobj = Tk()
-    tkobj.withdraw()
-    tkobj.clipboard_clear()
-    tkobj.clipboard_append(password)
-    tkobj.update()
-    tkobj.destroy()
-
 def main():
     characters = pwm.get_chars()
     password = pwm.generate_pw(10, characters)
