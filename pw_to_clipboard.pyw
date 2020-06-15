@@ -2,11 +2,16 @@
 clipboard. Quick one-click script intended for ease of use."""
 
 import pw_main as pwm
-import pyperclip
+from tkinter import Tk
 
 def copy_to_clipboard(password):
-    """Copy to clipboard using pyperclip."""
-    pyperclip.copy(password)
+    """Copy to clipboard using tkinter."""
+    tkobj = Tk()
+    tkobj.withdraw()
+    tkobj.clipboard_clear()
+    tkobj.clipboard_append(password)
+    tkobj.update()
+    tkobj.destroy()
 
 def main():
     characters = pwm.get_chars()
