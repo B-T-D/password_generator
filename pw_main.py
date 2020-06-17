@@ -121,6 +121,7 @@ write to text file.")
     elif choice == 'w':
         output_txt(password)
         print(f"Saved to pw_out.txt")
+    input("Press any key to exit\n>>>")
 
 def main():
     command_line()
