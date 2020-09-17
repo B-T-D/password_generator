@@ -14,7 +14,7 @@ def copy_to_clipboard(password):
 
 def main():
     characters = pwm.get_chars()
-    password = pwm.generate_pw(10, characters)
+    password = pwm.generate_pw(12, characters)
     copy_to_clipboard(password)
 
 if __name__ == '__main__':
