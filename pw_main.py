@@ -70,6 +70,7 @@ def generate_pw(length, characters):
     password = ''
     for i in range(length):
         password += random.choice(characters)
+    end = time.time()
     return password
 
 def get_char_options_input():
